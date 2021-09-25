@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+*{
+   font-family: 'Poppins', sans-serif;
+}
+
+html{
+   margin:0;
+   scroll-behavior: smooth;
+   font-family: 'Poppins', sans-serif;
+}
+
+body{
+   margin:0;
+   display: flex;
+   flex-direction: column;
+   color:rgb(31, 31, 31);
+   font-family: 'Poppins', sans-serif;
+   background: url(../assets/bg.webp);
+   object-fit: cover;
+  
+}
+
+::-webkit-scrollbar {
+   width: 12px;
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar-track {
+   background: #dcdcdc;
+ }
+ 
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: rgb(0, 195, 255);
+   border-radius: 10px;
+   border: 3px solid #dcdcdc;
+
+ }
+ 
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+   background: rgb(58, 209, 255);
+ }
+
+ h1, p{
+    text-align: center;
+ }
+ h1{
+    margin: 1rem auto;
+    display: inline;
+    font-size: 4rem;
+    font-weight: bold;
+    background-image: linear-gradient( 70deg, rgb(37, 224, 227), rgb(0, 166, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Alfa Slab One', cursive;
+ }
+
+form{
+   display:flex;
+   flex-direction: column;
+   width: 50vw;
+   /* justify-content: center;
+   align-items: stretch; */
+   border: 1px solid black;
+   margin: 2rem auto;
+   padding:2.5rem;
+}
+
+form > input, form > select{
+   margin: .3rem auto 1.5rem auto;  
+   min-width: 90%
+}
+
+form >label, form >p{
+   margin: 1rem auto 1rem auto;
+   min-width: 90%;
+   text-align: left;
+}
+
+.radio-title,
+.radio{
+   margin: .5rem auto 
+
+}
+
+.checkbox-title{
+   margin-top: 2rem;
+   margin-bottom: .6rem;
+}
+
+.check{
+   margin: .6rem auto;
+}
+
+.title-textarea{
+   margin-top:2rem;
+}
+
+.input-textarea{
+   margin: 1rem auto;
+   resize:none;
+   width: 90%;
+   font-family: popins;
+
+}
+
+#submit{
+   margin: .5rem auto;
+   width: 90%;
+   height: 2rem;
+   background-color: rgb(31, 240, 255);
+   border: 2px solid transparent;
+   border-radius: 5px;
+}
+
+#submit:hover{
+   background-color: rgb(82, 243, 255);
+   border: 2px solid rgb(22, 151, 160);
+   cursor: pointer;
+}
