@@ -1,14 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 *{
    font-family: 'Poppins', sans-serif;
+   --main-color:  rgb(22, 47, 237);
+   --second-color:  rgb(69, 221, 255);
+   --main-alpha-color:  rgba(38, 59, 218, 0.4);
+   --second-alpha-color:  rgba(0, 208, 255, 0.4);
+
+   --desktop-font-title: 30px;
+   --large-desktop-font-title: 38px;
+   --mobile-font-title: 20px;
+ 
 }
 
 html{
    margin:0;
    scroll-behavior: smooth;
    font-family: 'Poppins', sans-serif;
+   /* background: url(../assets/bg.webp) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+  
 }
+
+
+.container {
+   position: absolute;
+   top: 0; 
+   left: 0;
+   width: 100%; 
+   min-height: 100%;  
+   z-index: -1;
+
+   background: linear-gradient(
+      115deg,
+      var(--main-alpha-color),
+      var(--second-alpha-color)
+    ),
+    url(../assets/bg.webp) no-repeat center center fixed; 
+
+    /* background: url(../assets/bg.webp) no-repeat center center fixed;
+    
+    
+
+   /* background: url(../assets/bg.webp) no-repeat center center fixed;  */
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* overflow:scroll; */
+  /* background-size: 100% 100%;  */
+  /* display: ; */
+  /* background-attachment: fixed; */
+ }
+
+ 
 
 body{
    margin:0;
@@ -16,8 +65,8 @@ body{
    flex-direction: column;
    color:rgb(31, 31, 31);
    font-family: 'Poppins', sans-serif;
-   background: url(../assets/bg.webp);
-   object-fit: cover;
+   /* background: url(../assets/bg.webp); */
+  
   
 }
 
@@ -43,15 +92,17 @@ body{
    background: rgb(58, 209, 255);
  }
 
+
  h1, p{
     text-align: center;
  }
+
  h1{
     margin: 1rem auto;
-    display: inline;
+    display: block;
     font-size: 4rem;
     font-weight: bold;
-    background-image: linear-gradient( 70deg, rgb(37, 224, 227), rgb(0, 166, 255));
+    background-image: linear-gradient( 70deg, var(--second-color), var(--main-color));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -65,8 +116,11 @@ form{
    /* justify-content: center;
    align-items: stretch; */
    border: 1px solid black;
+   border-radius:10px;
    margin: 2rem auto;
    padding:2.5rem;
+
+   background-color: rgba(255, 255, 255, 0.7)
 }
 
 form > input, form > select{
@@ -78,6 +132,25 @@ form >label, form >p{
    margin: 1rem auto 1rem auto;
    min-width: 90%;
    text-align: left;
+}
+
+
+.input-text{display: block;
+   width: 90%;
+   height: 2rem;
+   padding: 0.3rem 0.7rem;
+   color: #495057;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 1px solid #ced4da;
+   border-radius: 0.25rem;
+   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-text:focus{
+   border-color: #80bdff;
+   outline: 0;
+   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .radio-title,
@@ -101,23 +174,30 @@ form >label, form >p{
 
 .input-textarea{
    margin: 1rem auto;
-   resize:none;
+   padding: 1rem;
+   resize: none;
    width: 90%;
-   font-family: popins;
+   min-height: 30%;
+   font-family: 'Poppins', sans-serif;
 
 }
 
 #submit{
+   font-size: 20px;
+   font-weight: bold;
    margin: .5rem auto;
+   padding: .8rem;
    width: 90%;
-   height: 2rem;
-   background-color: rgb(31, 240, 255);
+   /* height: auto; */
+   background-color: var(--second-color);
+   color: var(--main-color);
    border: 2px solid transparent;
    border-radius: 5px;
+   transition: all .3s ease;
 }
 
 #submit:hover{
-   background-color: rgb(82, 243, 255);
-   border: 2px solid rgb(22, 151, 160);
+   background-color: var(--main-color);
+   color: var(--second-color);
    cursor: pointer;
 }
