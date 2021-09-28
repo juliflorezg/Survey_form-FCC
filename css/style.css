@@ -40,7 +40,7 @@ html{
       var(--main-alpha-color),
       var(--second-alpha-color)
     ),
-    url(../assets/bg.webp) no-repeat center center fixed; 
+    url(./assets/bg.webp) no-repeat center center fixed; 
 
     /* background: url(../assets/bg.webp) no-repeat center center fixed;
     
