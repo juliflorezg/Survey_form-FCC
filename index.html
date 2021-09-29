@@ -9,22 +9,24 @@
 </head>
 <body>
 
-   <h1 id="title">User survey form</h1>
+   <div class="container">
+
+      <h1 id="title">User survey form</h1>
    <p id="description">Let us know more about you.. </p>
 
    <main>
       <form action="" id="survey-form">
-         <label for="name" id="name-label">Name:</label>
-         <input type="text" id="name" name="name" placeholder="Enter your name" required>
+         <label for="name" id="name-label">Name: </label>
+         <input type="text" id="name" class="input-text" name="name" placeholder="Enter your name" required>
 
          <label for="email" id="email-label">Email:</label>
-         <input type="email" id="email" name="email" title="The email is incorrect" placeholder="Enter your email" required>
+         <input type="email" id="email" class="input-text" name="email" title="The email is incorrect" placeholder="Enter your email" required>
 
          <label for="number" id="number-label">Age (optional):</label>
-         <input type="number" id="number" name="number" min="15" max="100" placeholder="Age">
+         <input type="number" id="number" class="input-text" name="number" min="15" max="100" placeholder="Age">
 
          <p>Which one is your favorite?</p>
-         <select id="dropdown" >
+         <select id="dropdown" class="input-text">
             <option disabled="" selected="" value="">Select your favorite one</option>
             <option>Banana</option>
             <option>Orange</option>
@@ -78,15 +80,15 @@
          
          <p class="title-textarea">Would you tell something else about yourself?</p>
 
-         <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..." rows="15" cols="70"></textarea>
+         <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..." rows="8" cols="70"></textarea>
 
          <button type="submit" id="submit">Submit</button>
 
       </form>
    </main>
-   
 
-   <h2>gradient text</h2>
+   </div>
+   
 
    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
